@@ -1,10 +1,132 @@
+
+/* --- Les fonts --- */
+
 @font-face {
-    font-family: Raleway-Regular;
+    font-family: "Raleway-Regular";
     src: url(fonts/Raleway-Regular.ttf);
 }
 
 @font-face {
-    font-family: Raleway-Bold;
+    font-family: "Raleway-Bold";
     src: url(fonts/Raleway-Bold.ttf);
 }
+
+/* --- Le corps de la page général --- */
+
+
+body {
+    background-color: #ffff;
+    font-family: "Raleway-Regular";
+    color: black;
+}
+
+.container  {
+    padding: 0 70px;
+}
+
+/* Les titres */
+
+h1 {
+    font-family: "Raleway-Bold";
+    font-size: 1.5em;
+
+    padding: 20px 0;
+}
+
+/* --- Le header --- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 70px;
+
+}
+
+/* Logo */
+
+header img {
+    width: 61.09px;
+    height: 19px;
+    padding: 50px 0;
+}
+
+/* Menu */
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.menu_item {
+    padding: 46px 0;
+
+    border: transparent 2px solid;
+}
+
+.menu_item:hover {
+    color: #0065FC;
+    cursor: pointer;
+    border-top:#0065FC 2px solid;
+}
+
+/* --- Search ---- */
+
+/* Les titres au dessus de la search bar */
+
+.search {
+    display: flex;
+    flex-direction: column;
+}
+
+.search_title {
+    padding-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* La search bar */
+
+.search_bar {
+    display: flex;
+    align-self: baseline;
+}
+
+.search_bar i, .search_bar input, .search_bar p {
+    padding: 15px 20px;
+}
+
+.search_bar i {
+    background-color: #F2F2F2;
+    border-radius: 15px 0 0 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search_bar input {
+    border: #F2F2F2 solid 1px;
+    outline: none;
+
+    font-size: 1em;
+    font-family: "Raleway-Bold";
+
+}
+
+.search_bar p {
+    background-color: #0065FC;
+    color: #ffff;
+    border-radius: 0 15px 15px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
 
