@@ -29,18 +29,30 @@ body {
 h1 {
     font-family: "Raleway-Bold";
     font-size: 1.5em;
-
+    
     padding: 20px 0;
 }
+
+/* --- Les icones --- */
+
+.fa-solid {
+    color: #0065FC;
+}
+
+.fa-location-dot {
+    color: black;
+}
+
+
 
 /* --- Le header --- */
 
 header {
     display: flex;
     justify-content: space-between;
-
+    
     padding: 0 70px;
-
+    
 }
 
 /* Logo */
@@ -61,7 +73,7 @@ header img {
 
 .menu_item {
     padding: 46px 0;
-
+    
     border: transparent 2px solid;
 }
 
@@ -70,6 +82,8 @@ header img {
     cursor: pointer;
     border-top:#0065FC 2px solid;
 }
+
+
 
 /* --- Search ---- */
 
@@ -82,7 +96,7 @@ header img {
 
 .search_title {
     padding-bottom: 20px;
-
+    
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -102,7 +116,7 @@ header img {
 .search_bar i {
     background-color: #F2F2F2;
     border-radius: 15px 0 0 15px;
-
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -111,22 +125,213 @@ header img {
 .search_bar input {
     border: #F2F2F2 solid 1px;
     outline: none;
-
+    
     font-size: 1em;
     font-family: "Raleway-Bold";
-
+    
 }
 
 .search_bar p {
     background-color: #0065FC;
     color: #ffff;
     border-radius: 0 15px 15px 0;
-
+    
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    cursor: pointer;
 }
 
 
+
+/* ---- Filtres ---- */
+
+.filters {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+    padding: 30px 0;
+    gap: 40px;
+    
+    font-family: "Raleway-Bold";
+}
+
+.filter_items {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.filter_item {
+    display: flex;
+    
+    gap: 10px;
+    padding: 15px 25px;
+    
+    border : solid 2px #D9D9D9;
+    border-radius: 25px;
+    
+    cursor: pointer;
+    
+}
+
+.filter_item:hover {
+    background-color: #DEEBFF;
+}
+
+
+/* --- Nombre de résultats --- */
+
+.results_number {
+    display: flex;
+    align-items: center;
+    
+    gap: 15px;
+}
+
+.fa-info {
+    border: solid 1px #D9D9D9;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+
+
+
+/* --- Les lieux --- */
+
+/* --- Commun au main et à l'aside --- */ 
+
+/* Grande div qui englobe les deux blocs */
+
+.places {
+    display: flex;
+    justify-content: space-between;
+    
+    gap: 40px;
+    padding: 40px 0;
+}
+
+/* Commun à chaque bloc général */
+
+.main_results, .aside_results {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    padding: 30px;
+    gap: 20px;
+    
+    border-radius: 20px;
+    background-color: #F2F2F2;
+}
+
+/* Commun au contenu des blocs */
+
+.results_item, .aside_item {
+    background-color: #ffff;
+    border-radius: 20px;
+    
+}
+
+.place_name {
+    font-family: "Raleway-Bold";
+}
+
+.stars {
+    letter-spacing: -2px;
+}
+
+.last-star {
+    color: #F2F2F2;
+}
+
+
+/* --- Résultats main --- */
+
+.main_results {
+    flex: 2.5;
+}
+
+
+.results_items {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    
+    row-gap: 30px;
+    column-gap: 20px;  
+}
+
+.results_items img {
+    height: 120px;
+    width: 240px;
+    object-fit: fill;
+    
+    border-radius: 20px 20px 0 0;
+    
+}
+
+.results_item {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.results_item_description {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.plus {
+    font-family: "Raleway-Bold";
+}
+
+/* Card du aside */
+
+.aside_results {
+    flex: 1;
+}
+
+.aside_items {
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+.aside_items img {
+    height: 144px;
+    width: 137px;
+    object-fit: fill;
+    
+    border-radius: 20px 0 0 20px;
+    
+}
+
+.aside_item {
+    display: flex;
+    flex-direction: row;
+
+    padding: 5px;
+    gap: 20px;
+}
+
+.aside_description {
+    display: flex;
+    flex-direction: column;
+}
+
+.aside_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 
 
