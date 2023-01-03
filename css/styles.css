@@ -12,6 +12,10 @@
 }
 
 /* --- Le corps de la page général --- */
+
+* {
+    box-sizing: border-box;
+}
     
 
 body {
@@ -61,7 +65,8 @@ header {
 header img {
     width: 61.09px;
     height: 19px;
-    padding: 50px 0;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 /* Menu */
@@ -124,6 +129,7 @@ header img {
 }
 
 .search_bar input {
+    display: flex;
     border: #F2F2F2 solid 1px;
     outline: none;
     
@@ -258,7 +264,7 @@ header img {
     display: flex;
 
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
     flex-wrap: wrap;
     
     row-gap: 40px;
@@ -268,7 +274,6 @@ header img {
 
 .results_items img {
     height: 150px;
-    width: 100%;
     object-fit: cover;
     
     border-radius: 20px 20px 0 0;
@@ -326,9 +331,9 @@ header img {
     gap: 40px;
 }
 
-.aside_items img {
+.aside_img img {
+    width: 130px;
     height: 150px;
-    width: 100px;
     object-fit: cover;
     
     border-radius: 20px 0 0 20px;
@@ -447,21 +452,21 @@ footer {
 @media screen and (max-width:1400px) {
 
     body p {
-        font-size: 0.9em;
+        font-size: 0.7em;
     }
 
     .container  {
-        padding: 0 50px;
+        padding: 0 40px;
     }
 
     h1 {
-        font-size: 1.1em;
+        font-size: 1em;
     }
 
     /* ---- Header ---- */
 
     header {
-        padding: 0 50px;
+        padding: 0 40px;
     }
 
     /* ---- Filtres ---- */
@@ -484,7 +489,7 @@ footer {
     /* ---- Icones ----*/
 
     .fa-star {
-        font-size: 0.8em;
+        font-size: 0.7em;
     }
 
     /* --- Résultats main --- */
@@ -495,8 +500,16 @@ footer {
     }
 
     .results_items img {
-        height: 110px;
+        height: 90px;
         width: 100%;
+    }
+
+     /* --- Résultats aside --- */
+
+    .aside_img img {
+        height: 115px;
+        width: 90px;
+        
     }
     
     /* --- Activités --- */
@@ -512,7 +525,6 @@ footer {
     .activites_name {
         padding: 20px;
     }
-
 
 }
 
@@ -656,5 +668,206 @@ footer {
     .footer_title {
         font-size: 1em;
     }
+
+}
+
+
+/* --- TELEPHONE --- */
+
+@media screen and (max-width:768px) {
+
+/* --- Le corps de la page général --- */
+
+
+    .container  {
+        padding: 0 20px;
+    }
+
+    /* Les titres */
+
+    h1 {
+        font-size: 1em;  
+        padding: 20px 0;
+    }
+
+
+
+    /* --- Le header --- */
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        padding: 0 20px;
+        
+    }
+
+    /* Logo */
+
+    header img {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Menu */
+
+    .menu {
+        width: 100%;
+        justify-content: center;
+        gap: 0;
+    }
+
+    .menu_item {
+        padding: 15px 0;
+        width: 50%;
+        text-align: center;
+    }
+
+    .menu_item:hover {
+        border-top:transparent 2px solid;
+        border-bottom:#0065FC 2px solid;
+
+    }
+
+
+    /* La search bar */
+
+
+    .search_bar i, .search_bar input, .search_bar p {
+        display: flex;
+        padding: 10px 10px;
+    }
+
+
+    /* ---- Filtres ---- */
+
+    .filters {
+        flex-direction: column;
+        align-items:stretch;
+        
+        gap: 10px;
+    }
+
+    .filter_items {
+        flex-wrap: wrap;
+        column-gap: 10px;
+    }
+
+    .filter_item {
+        align-items: center;
+        flex-basis: 40%;
+        flex-grow: 1;
+        
+        padding: 15px 10px;
+        
+    }
+
+
+    /* --- Les lieux --- */
+
+    /* --- Commun au main et à l'aside --- */ 
+
+    /* Grande div qui englobe les deux blocs */
+
+    .places {
+        flex-direction: column-reverse;
+    }
+
+    /* --- Résultats main --- */
+
+    .main_results {
+        padding: 0px;
+        gap: 20px;
+        align-items: stretch;
+        
+        background-color: #ffff;
+    }
+
+
+    .results_items {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap:nowrap;
+
+        
+        row-gap: 30px;
+        column-gap: 0px;
+
+    }
+
+    .results_items img {
+        height: 150px;
+        object-fit: cover;
+        
+        border-radius: 20px 20px 0 0;
+        
+    }
+
+    .results_item {
+        flex-basis: 100%;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    /* --- Card du aside --- */
+
+
+    /* Corps du aside */
+
+    .aside_results {
+        margin-left: -20px;
+        margin-right: -20px;       
+        padding: 20px;
+        gap: 20px;
+        
+        background-color: #F2F2F2;
+        justify-content: flex-start;
+
+        border-radius: 0;
+    }
+
+    .aside_items {
+        display: flex;
+        flex-direction: column;
+
+        gap: 40px;
+    }
+
+    .aside_img img {
+        height: 150px;
+        width: 150px;
+        object-fit: cover;
+        
+    }
+
+    .aside_item {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    /* --- Activités --- */
+
+
+    .activities_items {
+        flex-direction: column;
+    }
+
+
+    .activities_item img {
+        height: 200px;
+    }
+
+    /* --- Footer --- */
+
+    footer {
+        margin-left: -20px;
+        margin-right: -20px;
+        flex-direction: column;
+        gap: 50px;
+    }
+
 
 }
