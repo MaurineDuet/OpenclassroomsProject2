@@ -22,17 +22,28 @@ body {
     background-color: #ffff;
     font-family: "Raleway-Regular";
     color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.container  {
-    padding: 0 70px;
+body p {
+    font-size: 0.9em;
 }
+
+main  {
+    width: 1300px;
+    display: flex;
+    flex-direction: column;
+}
+
+
 
 /* Les titres */
 
 h1 {
     font-family: "Raleway-Bold";
-    font-size: 1.5em;
+    font-size: 1.3em;
     
     padding: 20px 0;
 }
@@ -49,14 +60,13 @@ h1 {
 }
 
 
-
 /* --- Le header --- */
 
 header {
     display: flex;
     justify-content: space-between;
-    
-    padding: 0 70px;
+    align-items: center;
+    width: 1300px;
     
 }
 
@@ -160,7 +170,7 @@ header img {
     align-items: center;
     
     padding: 30px 0;
-    gap: 40px;
+    gap: 20px;
     
     font-family: "Raleway-Bold";
 }
@@ -168,7 +178,7 @@ header img {
 .filter_items {
     display: flex;
     justify-content: space-between;
-    gap: 40px;
+    gap: 20px;
 }
 
 .filter_item {
@@ -214,7 +224,7 @@ header img {
 
 .places {
     display: flex;
-    gap: 40px;
+    gap: 20px;
     
     padding: 40px 0;
 }
@@ -268,12 +278,13 @@ header img {
     flex-wrap: wrap;
     
     row-gap: 40px;
-    column-gap: 20px;
+    column-gap: 10px;
 
 }
 
 .results_items img {
-    height: 150px;
+    height: 90px;
+    width: 100%;
     object-fit: cover;
     
     border-radius: 20px 20px 0 0;
@@ -332,8 +343,8 @@ header img {
 }
 
 .aside_img img {
-    width: 130px;
-    height: 150px;
+    width: 90px;
+    height: 115px;
     object-fit: cover;
     
     border-radius: 20px 0 0 20px;
@@ -382,7 +393,7 @@ header img {
 .activities_items {
     display: flex;
     justify-content: space-between;
-    gap: 40px;
+    gap: 30px;
     padding-bottom: 60px;
 }
 
@@ -399,7 +410,7 @@ header img {
 }
 
 .activities_item img {
-    height: 500px;
+    height: 350px;
     width: 100%;
     object-fit: cover;
     border-top-left-radius: 20px;
@@ -412,7 +423,7 @@ header img {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 
-    padding: 30px;
+    padding: 20px;
 }
 
 
@@ -424,6 +435,7 @@ footer {
     display: flex;
     gap: 100px;
     padding: 50px;
+    width: 1300px;
 }
 
 .footer_item {
@@ -447,110 +459,46 @@ footer {
 
 /* -------------- RESPONSIVE --------------- */
 
-/* --- ECRANS ORDINATEURS NORMAUX ---*/ 
-
 @media screen and (max-width:1400px) {
+
+/* Taille des containers */
+
+    header, main, footer {
+        width: 950px;
+    }
+
+/* Ajustement de la taille de la police */
 
     body p {
         font-size: 0.7em;
     }
 
-    .container  {
-        padding: 0 40px;
-    }
-
     h1 {
-        font-size: 1em;
+        font-size: 1.1em;
     }
-
-    /* ---- Header ---- */
-
-    header {
-        padding: 0 40px;
-    }
-
-    /* ---- Filtres ---- */
-
-    .filters {
-        gap: 20px;
-        
-    }
-
-    .filter_items {
-        gap: 20px;
-    }
-
-    /* --- Les lieux --- */
-
-    .places {
-        gap: 20px;
-    }
-
-    /* ---- Icones ----*/
 
     .fa-star {
         font-size: 0.7em;
     }
 
-    /* --- Résultats main --- */
-
-
-    .results_items {
-        column-gap: 10px;
-    }
-
-    .results_items img {
-        height: 90px;
-        width: 100%;
-    }
-
-     /* --- Résultats aside --- */
-
-    .aside_img img {
-        height: 115px;
-        width: 90px;
-        
-    }
-    
-    /* --- Activités --- */
-
-    .activities_items {
-        gap: 30px;
-    }
-
-    .activities_item img {
-        height: 350px;
-    }
-
-    .activites_name {
-        padding: 20px;
-    }
-
 }
-
 
 
 /* --- TABLETTES --- */
 
 @media screen and (max-width:992px) {
 
-    .container  {
-        padding: 0 50px;
-    }
+    /* Taille des containers */
 
+    header, main, footer {
+        width: 700px;
+            
+        }
    
     /* Les titres */
 
     h1 {
         font-size: 1.2em;  
-    }
-
-
-    /* --- Le header --- */
-
-    header {
-    padding: 0 50px;
-        
     }
 
 
@@ -679,8 +627,8 @@ footer {
 /* --- Le corps de la page général --- */
 
 
-    .container  {
-        padding: 0 20px;
+    header, main, footer  {
+        width: 300px;
     }
 
     /* Les titres */
@@ -698,9 +646,7 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        
-        padding: 0 20px;
-        
+
     }
 
     /* Logo */
@@ -871,3 +817,50 @@ footer {
 
 
 }
+
+
+
+/*
+
+    /* ---- Icones ----
+
+    .fa-star {
+        font-size: 0.7em;
+    }
+
+    /* --- Résultats main --- 
+
+
+    .results_items {
+        column-gap: 10px;
+    }
+
+    .results_items img {
+        height: 90px;
+        width: 100%;
+    }
+
+     /* --- Résultats aside --- 
+    .aside_img img {
+        height: 115px;
+        width: 90px;
+        
+    }
+    
+    /* --- Activités --- 
+
+    .activities_items {
+        gap: 30px;
+    }
+
+    .activities_item img {
+        height: 350px;
+    }
+
+    .activites_name {
+        padding: 20px;
+    }
+
+    */
+
+
