@@ -27,10 +27,6 @@ body {
     align-items: center;
 }
 
-body p {
-    font-size: 0.9em;
-}
-
 main  {
     width: 1300px;
     display: flex;
@@ -39,7 +35,7 @@ main  {
 
 
 
-/* Les titres */
+/* Le style du texte et des titres */
 
 h1 {
     font-family: "Raleway-Bold";
@@ -47,6 +43,16 @@ h1 {
     
     padding: 20px 0;
 }
+
+body p {
+    font-size: 0.9em;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
 
 /* --- Les icones --- */
 
@@ -88,8 +94,7 @@ header img {
 }
 
 .menu_item {
-    padding: 50px 0;
-    
+    padding: 50px 0;   
     border: transparent 2px solid;
 }
 
@@ -129,7 +134,7 @@ header img {
     padding: 15px 20px;
 }
 
-.search_bar i {
+.fa-location-dot {
     background-color: #F2F2F2;
     border-radius: 15px 0 0 15px;
     
@@ -160,6 +165,9 @@ header img {
     cursor: pointer;
 }
 
+.fa-magnifying-glass {
+    display: none;
+}
 
 
 /* ---- Filtres ---- */
@@ -222,7 +230,7 @@ header img {
 
 /* Grande div qui englobe les deux blocs */
 
-.places {
+#places {
     display: flex;
     gap: 20px;
     
@@ -383,7 +391,7 @@ header img {
 
 /* --- Activités --- */
 
-.activities {
+#activities {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -430,8 +438,11 @@ header img {
 /* --- Footer --- */
 
 footer {
-    background-color: #F2F2F2;
+    display: flex;
+}
 
+footer nav {
+    background-color: #F2F2F2;
     display: flex;
     gap: 100px;
     padding: 50px;
@@ -464,8 +475,12 @@ footer {
 /* Taille des containers */
 
     header, main, footer {
-        width: 950px;
+        min-width: 950px;
+        max-width: 1300px;
+        width: 100%;
+        padding: 0 40px;
     }
+
 
 /* Ajustement de la taille de la police */
 
@@ -484,6 +499,7 @@ footer {
 }
 
 
+
 /* --- TABLETTES --- */
 
 @media screen and (max-width:992px) {
@@ -491,7 +507,10 @@ footer {
     /* Taille des containers */
 
     header, main, footer {
-        width: 700px;
+        min-width: 700px;
+        max-width: 900px;
+        padding: 0 40px;
+        width: 100%;
             
         }
    
@@ -523,7 +542,7 @@ footer {
 
     /* --- Les lieux --- */
 
-    .places {
+    #places {
         flex-direction: column;
         gap: 60px;
     }
@@ -603,7 +622,7 @@ footer {
 
     /* --- Footer --- */
 
-    footer {
+    footer nav {
         gap: 70px;
         padding: 20px 0 60px 50px;
     }
@@ -628,7 +647,10 @@ footer {
 
 
     header, main, footer  {
-        width: 300px;
+        min-width: 300px;
+        max-width: 700px;
+        padding: 0 20px;
+        width: 100%;
     }
 
     /* Les titres */
@@ -638,6 +660,9 @@ footer {
         padding: 20px 0;
     }
 
+    body p {
+        font-size: 0.8em;
+    }
 
 
     /* --- Le header --- */
@@ -646,6 +671,7 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 20px 0px;
 
     }
 
@@ -660,29 +686,43 @@ footer {
 
     .menu {
         width: 100%;
-        justify-content: center;
+        justify-content: space-around;
         gap: 0;
     }
 
     .menu_item {
-        padding: 15px 0;
-        width: 50%;
+        flex-grow: 1;
+        padding: 20px 0;
         text-align: center;
+        border-bottom:#D9D9D9 2px solid;
     }
 
     .menu_item:hover {
         border-top:transparent 2px solid;
         border-bottom:#0065FC 2px solid;
-
     }
 
 
     /* La search bar */
 
 
-    .search_bar i, .search_bar input, .search_bar p {
+    .search_bar i, .search_bar input {
         display: flex;
         padding: 10px 10px;
+    }
+
+    .search_bar p {
+        display: none;
+    }
+
+    .fa-magnifying-glass {
+        background-color: #0065FC;
+        color: #ffff;
+        border-radius: 0 15px 15px 0;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
 
@@ -716,14 +756,14 @@ footer {
 
     /* Grande div qui englobe les deux blocs */
 
-    .places {
+    #places {
         flex-direction: column-reverse;
     }
 
     /* --- Résultats main --- */
 
     .main_results {
-        padding: 0px;
+        padding: 0;
         gap: 20px;
         align-items: stretch;
         
@@ -809,12 +849,13 @@ footer {
     /* --- Footer --- */
 
     footer {
-        margin-left: -20px;
-        margin-right: -20px;
-        flex-direction: column;
-        gap: 50px;
+        padding: 0;
     }
 
+    footer nav {
+        flex-direction: column;
+        gap: 20px;
+    }
 
 }
 
