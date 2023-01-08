@@ -33,8 +33,6 @@ main  {
     flex-direction: column;
 }
 
-
-
 /* Le style du texte et des titres */
 
 h1 {
@@ -53,7 +51,6 @@ a {
     color: black;
 }
 
-
 /* --- Les icones --- */
 
 .fa-solid {
@@ -65,15 +62,13 @@ a {
     color: black;
 }
 
-
 /* --- Le header --- */
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1300px;
-    
+    width: 1300px;   
 }
 
 /* Logo */
@@ -113,11 +108,10 @@ header img {
 .search {
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
 .search_title {
-    padding-bottom: 20px;
-    
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -149,14 +143,16 @@ header img {
     outline: none;
     
     font-size: 1em;
-    font-family: "Raleway-Bold";
-    
+    font-family: "Raleway-Bold";   
 }
 
 .search_bar p {
     background-color: #0065FC;
     color: #ffff;
     border-radius: 0 15px 15px 0;
+
+    font-weight: 700;
+    letter-spacing: 1px;
     
     display: flex;
     align-items: center;
@@ -178,7 +174,7 @@ header img {
     align-items: center;
     
     padding: 30px 0;
-    gap: 20px;
+    gap: 30px;
     
     font-family: "Raleway-Bold";
 }
@@ -186,7 +182,7 @@ header img {
 .filter_items {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 30px;
 }
 
 .filter_item {
@@ -199,8 +195,7 @@ header img {
     border : solid 2px #D9D9D9;
     border-radius: 25px;
     
-    cursor: pointer;
-    
+    cursor: pointer;   
 }
 
 .filter_item:hover {
@@ -234,7 +229,7 @@ header img {
     display: flex;
     gap: 20px;
     
-    padding: 40px 0;
+    padding: 30px 0;
 }
 
 /* Commun à chaque bloc général */
@@ -274,9 +269,7 @@ header img {
     font-weight: 700;
 }
 
-
 /* --- Résultats main --- */
-
 
 .results_items {
     display: flex;
@@ -287,7 +280,6 @@ header img {
     
     row-gap: 40px;
     column-gap: 10px;
-
 }
 
 .results_items img {
@@ -295,8 +287,7 @@ header img {
     width: 100%;
     object-fit: cover;
     
-    border-radius: 20px 20px 0 0;
-    
+    border-radius: 20px 20px 0 0;  
 }
 
 .results_item {
@@ -319,7 +310,7 @@ header img {
 
 .plus {
     font-family: "Raleway-Bold";
-    padding: 20px 0;
+    padding: 20px 0 10px 0;
 }
 
 /* --- Card du aside --- */
@@ -355,8 +346,7 @@ header img {
     height: 115px;
     object-fit: cover;
     
-    border-radius: 20px 0 0 20px;
-    
+    border-radius: 20px 0 0 20px;  
 }
 
 .aside_item {
@@ -402,7 +392,7 @@ header img {
     display: flex;
     justify-content: space-between;
     gap: 30px;
-    padding-bottom: 60px;
+    padding-bottom: 50px;
 }
 
 .activities_item {
@@ -414,7 +404,6 @@ header img {
     border-radius: 20px;
 
     cursor: pointer;
-
 }
 
 .activities_item img {
@@ -423,7 +412,6 @@ header img {
     object-fit: cover;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-
 }
 
 .activites_name {
@@ -434,7 +422,6 @@ header img {
     padding: 20px;
 }
 
-
 /* --- Footer --- */
 
 footer {
@@ -444,8 +431,8 @@ footer {
 footer nav {
     background-color: #F2F2F2;
     display: flex;
-    gap: 100px;
-    padding: 50px;
+    gap: 150px;
+    padding: 30px 60px 50px 60px;
     width: 1300px;
 }
 
@@ -458,8 +445,6 @@ footer nav {
 .footer_item p {
     cursor: pointer;
 }
-
-
 
 .footer_title {
     font-size: 1.2em;
@@ -476,16 +461,15 @@ footer nav {
 
     header, main, footer {
         min-width: 950px;
-        max-width: 1300px;
+        max-width: 1399px;
         width: 100%;
-        padding: 0 40px;
+        padding: 0 30px;
     }
-
 
 /* Ajustement de la taille de la police */
 
     body p {
-        font-size: 0.7em;
+        font-size: 0.8em;
     }
 
     h1 {
@@ -508,11 +492,10 @@ footer nav {
 
     header, main, footer {
         min-width: 700px;
-        max-width: 900px;
+        max-width: 991px;
         padding: 0 40px;
-        width: 100%;
-            
-        }
+        width: 100%;       
+    }
    
     /* Les titres */
 
@@ -520,37 +503,31 @@ footer nav {
         font-size: 1.2em;  
     }
 
+    body p {
+        font-size: 0.9em;
+    }
+
 
     /* ---- Filtres ---- */
 
     .filters {
-        gap: 10px;
-        
-        font-size: 0.9em;
+        gap: 20px;
     }
 
     .filter_items {
-        gap: 10px;
+        gap: 20px;
     }
 
-    .filter_item {
-        
+    .filter_item {  
         gap: 10px;
         padding: 10px 15px;
-
     }
 
     /* --- Les lieux --- */
 
     #places {
         flex-direction: column;
-        gap: 60px;
-    }
-
-    /* Commun à chaque bloc général */
-
-    .main_results, .aside_results {  
-        padding: 30px 30px;  
+        gap: 40px;
     }
 
 
@@ -559,7 +536,6 @@ footer nav {
     .results_items {
         row-gap: 40px;
         column-gap: 10px;
-
     }
 
     .results_items img {
@@ -573,7 +549,6 @@ footer nav {
 
     /* --- Card du aside --- */
 
-
     .aside_items {
         flex-direction: row;
         justify-content: space-between;
@@ -582,8 +557,7 @@ footer nav {
 
     .aside_items img {
         height: 130px;
-        width: 80px;
-        
+        width: 80px;    
     }
 
     .aside_item {
@@ -598,7 +572,6 @@ footer nav {
     }
 
 
-
     /* --- Activités --- */
 
     .activities_items {
@@ -611,14 +584,13 @@ footer nav {
     }
 
     .activities_item img {
-        height: 250px;
+        height: 200px;
         width: 100%;
     }
 
     .activites_name {
-        padding: 20px;
+        padding: 10px 20px;
     }
-
 
     /* --- Footer --- */
 
@@ -643,12 +615,12 @@ footer nav {
 
 @media screen and (max-width:768px) {
 
-/* --- Le corps de la page général --- */
 
+/* --- Le corps de la page général --- */
 
     header, main, footer  {
         min-width: 300px;
-        max-width: 700px;
+        max-width: 767px;
         padding: 0 20px;
         width: 100%;
     }
@@ -656,12 +628,12 @@ footer nav {
     /* Les titres */
 
     h1 {
-        font-size: 1em;  
+        font-size: 1.1em;  
         padding: 20px 0;
     }
 
     body p {
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
 
 
@@ -671,8 +643,7 @@ footer nav {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 20px 0px;
-
+        gap: 10px;
     }
 
     /* Logo */
@@ -702,13 +673,21 @@ footer nav {
         border-bottom:#0065FC 2px solid;
     }
 
-
     /* La search bar */
 
+    .search {
+        padding-top: 20px;
+        gap: 40px;
+    }
 
     .search_bar i, .search_bar input {
         display: flex;
-        padding: 10px 10px;
+        padding: 10px 15px;
+    }
+
+    .search_bar input {
+        min-width: 170px;
+        width: 100%;
     }
 
     .search_bar p {
@@ -731,8 +710,13 @@ footer nav {
     .filters {
         flex-direction: column;
         align-items:stretch;
+        padding: 40px 0;
         
         gap: 10px;
+    }
+
+    .filters p {
+        font-size: 1em;
     }
 
     .filter_items {
@@ -745,10 +729,16 @@ footer nav {
         flex-basis: 40%;
         flex-grow: 1;
         
-        padding: 15px 10px;
-        
+        padding: 15px 10px;  
     }
 
+    .filter_item p {
+        font-size: 0.8em;
+    }
+
+    .filter_item .fa-solid {
+        font-size: 1.3em;
+    }
 
     /* --- Les lieux --- */
 
@@ -758,6 +748,7 @@ footer nav {
 
     #places {
         flex-direction: column-reverse;
+        gap: 20px;
     }
 
     /* --- Résultats main --- */
@@ -780,15 +771,13 @@ footer nav {
         
         row-gap: 30px;
         column-gap: 0px;
-
     }
 
     .results_items img {
         height: 150px;
         object-fit: cover;
         
-        border-radius: 20px 20px 0 0;
-        
+        border-radius: 20px 20px 0 0;       
     }
 
     .results_item {
@@ -797,15 +786,18 @@ footer nav {
         flex-direction: column;
     }
 
-    /* --- Card du aside --- */
+    .plus {
+        display: none;
+    }
 
+    /* --- Card du aside --- */
 
     /* Corps du aside */
 
     .aside_results {
         margin-left: -20px;
         margin-right: -20px;       
-        padding: 20px;
+        padding: 20px 20px 40px 20px;
         gap: 20px;
         
         background-color: #F2F2F2;
@@ -824,8 +816,7 @@ footer nav {
     .aside_img img {
         height: 150px;
         width: 150px;
-        object-fit: cover;
-        
+        object-fit: cover;   
     }
 
     .aside_item {
@@ -836,11 +827,18 @@ footer nav {
 
     /* --- Activités --- */
 
+    #activities {
+        padding: 20px 0;
+    }
 
     .activities_items {
         flex-direction: column;
+        padding-bottom: 60px;
     }
 
+    .activites_name {
+        padding: 20px;
+    }
 
     .activities_item img {
         height: 200px;
@@ -858,50 +856,3 @@ footer nav {
     }
 
 }
-
-
-
-/*
-
-    /* ---- Icones ----
-
-    .fa-star {
-        font-size: 0.7em;
-    }
-
-    /* --- Résultats main --- 
-
-
-    .results_items {
-        column-gap: 10px;
-    }
-
-    .results_items img {
-        height: 90px;
-        width: 100%;
-    }
-
-     /* --- Résultats aside --- 
-    .aside_img img {
-        height: 115px;
-        width: 90px;
-        
-    }
-    
-    /* --- Activités --- 
-
-    .activities_items {
-        gap: 30px;
-    }
-
-    .activities_item img {
-        height: 350px;
-    }
-
-    .activites_name {
-        padding: 20px;
-    }
-
-    */
-
-
