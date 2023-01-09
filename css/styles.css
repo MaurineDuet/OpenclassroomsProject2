@@ -159,7 +159,7 @@ header img {
     cursor: pointer;
 }
 
-.fa-magnifying-glass {
+.icon_search {
     display: none;
 }
 
@@ -236,7 +236,7 @@ header img {
     display: flex;
     flex-direction: column;
     
-    padding: 30px;
+    padding: 20px 30px;
     gap: 20px;
     
     border-radius: 20px;
@@ -307,7 +307,7 @@ header img {
 
 .plus {
     font-family: "Raleway-Bold";
-    padding: 20px 0 10px 0;
+    padding-top: 20px;
 }
 
 /* --- Card du aside --- */
@@ -484,7 +484,7 @@ footer nav {
         font-size: 0.7em;
     }
 
-    .fa-magnifying-glass {
+    .icon_search {
         display: none;
     }
 
@@ -676,6 +676,10 @@ footer nav {
 
     .search_bar p {
         display: none;
+    }
+
+    .icon_search {
+        display: flex;
     }
 
     .fa-magnifying-glass {
