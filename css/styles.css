@@ -28,7 +28,8 @@ body {
 }
 
 main  {
-    width: 1300px;
+    width: 1400px;
+    padding: 0 50px;
     display: flex;
     flex-direction: column;
 }
@@ -68,7 +69,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1300px;   
+    width: 1400px;
+    padding: 0 50px; 
 }
 
 /* Logo */
@@ -247,7 +249,7 @@ header img {
 
 .results_item, .aside_item {
     background-color: #ffff;
-    border-radius: 20px;   
+    border-radius: 25px;   
 }
 
 .place_name {
@@ -436,8 +438,8 @@ footer nav {
     background-color: #F2F2F2;
     display: flex;
     gap: 150px;
-    padding: 30px 60px 50px 60px;
-    width: 1300px;
+    padding: 30px 50px 50px 50px;
+    width: 1400px;
 }
 
 .footer_item {
@@ -464,10 +466,10 @@ footer nav {
     /* Taille des containers */
 
     header, main, footer {
-        min-width: 950px;
-        max-width: 1399px;
+        min-width: 993px;
+        max-width: 1400px;
         width: 100%;
-        padding: 0 30px;
+        padding: 0 40px;
     }
 
     /* Ajustement de la taille de la police */
@@ -498,8 +500,8 @@ footer nav {
     /* Taille des containers */
 
     header, main, footer {
-        min-width: 700px;
-        max-width: 991px;
+        min-width: 769px;
+        max-width: 992px;
         padding: 0 40px;
         width: 100%;       
     }
@@ -604,7 +606,7 @@ footer nav {
 
     header, main, footer  {
         min-width: 300px;
-        max-width: 767px;
+        max-width: 768px;
         padding: 0 20px;
         width: 100%;
     }
@@ -680,6 +682,7 @@ footer nav {
 
     .icon_search {
         display: flex;
+        cursor: pointer;
     }
 
     .fa-magnifying-glass {
