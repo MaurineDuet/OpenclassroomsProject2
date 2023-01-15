@@ -27,9 +27,12 @@ body {
     align-items: center;
 }
 
-main  {
+header, main, footer {
     width: 1400px;
     padding: 0 50px;
+}
+
+main  {
     display: flex;
     flex-direction: column;
 }
@@ -38,9 +41,13 @@ main  {
 
 h1 {
     font-family: "Raleway-Bold";
-    font-size: 1.3em;
-    
+    font-size: 1.3em; 
     padding: 20px 0;
+}
+
+h2 {
+    font-family: "Raleway-Bold";
+    font-size: 0.9em;
 }
 
 p {
@@ -69,8 +76,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1400px;
-    padding: 0 50px; 
 }
 
 /* Logo */
@@ -175,8 +180,6 @@ header img {
     
     padding: 30px 0;
     gap: 30px;
-    
-    font-family: "Raleway-Bold";
 }
 
 .filter_items {
@@ -225,7 +228,7 @@ header img {
 
 /* Grande div qui englobe les deux blocs */
 
-#places {
+.places {
     display: flex;
     gap: 20px;
     
@@ -234,7 +237,7 @@ header img {
 
 /* Commun à chaque bloc général */
 
-.main_results, .aside_results {
+#main_results, .aside_results {
     display: flex;
     flex-direction: column;
     
@@ -250,10 +253,6 @@ header img {
 .results_item, .aside_item {
     background-color: #ffff;
     border-radius: 25px;   
-}
-
-.place_name {
-    font-family: "Raleway-Bold";
 }
 
 .stars {
@@ -308,7 +307,6 @@ header img {
 }
 
 .plus {
-    font-family: "Raleway-Bold";
     padding-top: 20px;
 }
 
@@ -326,7 +324,6 @@ header img {
     font-size: 1.3em;
 }
 
-
 /* Corps du aside */
 
 .aside_results {
@@ -340,7 +337,7 @@ header img {
     gap: 40px;
 }
 
-.aside_img img {
+.aside_item img {
     width: 90px;
     height: 120px;
     object-fit: cover;
@@ -416,8 +413,7 @@ header img {
     border-top-right-radius: 20px;
 }
 
-.activities_item p {
-    font-family: "Raleway-Bold";
+.activities_item h2 {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 
@@ -438,8 +434,8 @@ footer nav {
     background-color: #F2F2F2;
     display: flex;
     gap: 150px;
+    width: 100%;
     padding: 30px 50px 50px 50px;
-    width: 1400px;
 }
 
 .footer_item {
@@ -472,13 +468,13 @@ footer nav {
         padding: 0 40px;
     }
 
-    /* Ajustement de la taille de la police */
+    /* Ajustement de la taille de la police et des images de l'aside */
 
     h1 {
         font-size: 1.1em;
     }
 
-    p {
+    h2, p {
         font-size: 0.8em;
     }
 
@@ -488,6 +484,11 @@ footer nav {
 
     .icon_search {
         display: none;
+    }
+
+    .aside_item img {
+        width: 83px;
+        height: 125px;
     }
 
 }
@@ -512,7 +513,7 @@ footer nav {
         font-size: 1.2em;  
     }
 
-    p {
+    h2, p {
         font-size: 0.9em;
     }
 
@@ -533,9 +534,13 @@ footer nav {
 
     /* --- Les lieux --- */
 
-    #places {
+    .places {
         flex-direction: column;
         gap: 40px;
+    }
+
+    #main_results, .aside_results {
+        padding-bottom: 40px;
     }
 
     /* --- Résultats main --- */
@@ -605,7 +610,7 @@ footer nav {
     /* --- Le corps de la page général --- */
 
     header, main, footer  {
-        min-width: 300px;
+        min-width: 350px;
         max-width: 768px;
         padding: 0 20px;
         width: 100%;
@@ -617,7 +622,7 @@ footer nav {
         font-size: 1.1em;
     }
     
-    p {
+    h2, p {
         font-size: 0.9em;
     }
 
@@ -706,7 +711,7 @@ footer nav {
         gap: 20px;
     }
 
-    .filters p {
+    .filters h2 {
         font-size: 1em;
     }
 
@@ -723,7 +728,7 @@ footer nav {
         padding: 15px 10px;  
     }
 
-    .filter_item p {
+    .filter_item h2 {
         font-size: 0.8em;
     }
 
@@ -737,19 +742,18 @@ footer nav {
 
     /* Grande div qui englobe les deux blocs */
 
-    #places {
+    .places {
         flex-direction: column-reverse;
         gap: 20px;
     }
 
     /* --- Résultats main --- */
 
-    .main_results {
+    #main_results {
         padding: 0;
         align-items: stretch;    
         background-color: #ffff;
     }
-
 
     .results_items {
         flex-direction: column;
@@ -796,9 +800,9 @@ footer nav {
         gap: 20px;
     }
 
-    .aside_img img {
+    .aside_item img {
         height: 150px;
-        width: 150px; 
+        width: 140px; 
     }
 
     .aside_item {
@@ -818,7 +822,7 @@ footer nav {
         padding-bottom: 60px;
     }
 
-    .activities_item p {
+    .activities_item h2 {
         padding: 20px;
     }
 
