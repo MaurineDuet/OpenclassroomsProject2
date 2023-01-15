@@ -571,6 +571,10 @@ footer nav {
         flex-basis: 30%;
     }
 
+    .aside_item h2 {
+        padding-right: 10px;
+    }
+
     .aside_description {
         padding: 5px;
     }
